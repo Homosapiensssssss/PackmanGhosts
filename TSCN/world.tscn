@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b186v54btbbra"]
+
+[ext_resource type="PackedScene" uid="uid://dqxttqagblekh" path="res://TSCN/ghost_1.tscn" id="1_tgec1"]
+[ext_resource type="PackedScene" uid="uid://dxdg76a37gsjf" path="res://TSCN/Map.tscn" id="2_4j374"]
+
+[node name="World" type="Node2D" unique_id=1244045379]
+position = Vector2(15, 9)
+
+[node name="Ghost1" parent="." unique_id=1378361458 instance=ExtResource("1_tgec1")]
+position = Vector2(-891, -99)
+
+[node name="TileMapLayer" parent="." unique_id=514523288 instance=ExtResource("2_4j374")]

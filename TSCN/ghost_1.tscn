@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dqxttqagblekh"]
+
+[ext_resource type="Script" uid="uid://bx736366j4pmc" path="res://Scripts/Ghost1.cs" id="1_u1vwg"]
+[ext_resource type="Texture2D" uid="uid://bl45qax3qtbyn" path="res://Sprites/images.png" id="2_tbt1i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hprvc"]
+size = Vector2(225, 226)
+
+[node name="Ghost1" type="CharacterBody2D" unique_id=2052509449]
+script = ExtResource("1_u1vwg")
+
+[node name="SpriteOfGhost1" type="Sprite2D" parent="." unique_id=1091189433]
+texture = ExtResource("2_tbt1i")
+
+[node name="CShapeOfGhost1" type="CollisionShape2D" parent="." unique_id=172400956]
+position = Vector2(-1.5, -1)
+shape = SubResource("RectangleShape2D_hprvc")
