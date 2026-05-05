@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dqxttqagblekh"]
 
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://c4fdylqgwu5jw" path="res://Scripts/NextTurn2.cs" id="2_kc1nt"]
 [ext_resource type="Texture2D" uid="uid://bl45qax3qtbyn" path="res://Sprites/images.png" id="2_tbt1i"]
 
@@ -63,11 +64,22 @@ size = Vector2(54.25, 233.5)
 
 [node name="Ghost1" type="CharacterBody2D" unique_id=2052509449]
 script = SubResource("CSharpScript_f4v78")
+=======
+[ext_resource type="Script" uid="uid://bx736366j4pmc" path="res://Scripts/Ghost1.cs" id="1_u1vwg"]
+[ext_resource type="Texture2D" uid="uid://bl45qax3qtbyn" path="res://Sprites/images.png" id="2_tbt1i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hprvc"]
+size = Vector2(225, 226)
+
+[node name="Ghost1" type="CharacterBody2D" unique_id=2052509449]
+script = ExtResource("1_u1vwg")
+>>>>>>> 83e6434bdeedfc4f27cb8c30e7632866c545399c
 
 [node name="SpriteOfGhost1" type="Sprite2D" parent="." unique_id=1091189433]
 texture = ExtResource("2_tbt1i")
 
 [node name="CShapeOfGhost1" type="CollisionShape2D" parent="." unique_id=172400956]
+<<<<<<< HEAD
 position = Vector2(1.5, 0.5)
 shape = SubResource("RectangleShape2D_hprvc")
 
@@ -108,3 +120,7 @@ shape = SubResource("RectangleShape2D_d2f84")
 [connection signal="body_exited" from="NextTurn2/AreaRight" to="NextTurn2" method="_on_area_right_body_exited"]
 [connection signal="body_entered" from="NextTurn2/AreaLeft" to="NextTurn2" method="_on_area_left_body_entered"]
 [connection signal="body_exited" from="NextTurn2/AreaLeft" to="NextTurn2" method="_on_area_left_body_exited"]
+=======
+position = Vector2(-1.5, -1)
+shape = SubResource("RectangleShape2D_hprvc")
+>>>>>>> 83e6434bdeedfc4f27cb8c30e7632866c545399c

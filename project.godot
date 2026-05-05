@@ -11,7 +11,10 @@ config_version=5
 [application]
 
 config/name="Gostman"
+<<<<<<< HEAD
 run/main_scene="uid://2y40knn7pok1"
+=======
+>>>>>>> 83e6434bdeedfc4f27cb8c30e7632866c545399c
 config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
 config/icon="res://Sprites/icon.svg"
 
@@ -19,6 +22,7 @@ config/icon="res://Sprites/icon.svg"
 
 project/assembly_name="Gostman"
 
+<<<<<<< HEAD
 [input]
 
 Ghost2Up={
@@ -42,6 +46,8 @@ Ghost2Left={
 ]
 }
 
+=======
+>>>>>>> 83e6434bdeedfc4f27cb8c30e7632866c545399c
 [physics]
 
 3d/physics_engine="Jolt Physics"
