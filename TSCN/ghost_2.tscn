@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://c8f44x8r1rqxb"]
+
+[ext_resource type="Script" uid="uid://mjjq303aa24i" path="res://Scripts/Ghost2.cs" id="1_na08h"]
+[ext_resource type="Texture2D" uid="uid://dmdlutuugcd5v" path="res://Sprites/png-clipart-pac-man-adventures-in-time-pac-mania-pac-man-games-ghosts-pink-ghost-s-purple-violet-thumbnail.png" id="2_7dtk5"]
+[ext_resource type="Script" uid="uid://dre1ji0iwiomg" path="res://Scripts/NextTurn22.cs" id="3_7dtk5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_na08h"]
+size = Vector2(22, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dtk5"]
+size = Vector2(244.44441, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ew4a3"]
+size = Vector2(244.44441, 46.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17adx"]
+size = Vector2(52.5, 244.44441)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lheq"]
+size = Vector2(54.25, 244.44443)
+
+[node name="Ghost2" type="CharacterBody2D" unique_id=1971237107]
+script = ExtResource("1_na08h")
+
+[node name="Ghost2Sprite" type="Sprite2D" parent="." unique_id=752596245]
+position = Vector2(2.9802322e-08, 5.9604645e-08)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("2_7dtk5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=71642120]
+shape = SubResource("RectangleShape2D_na08h")
+
+[node name="NextTurn2" type="Node2D" parent="." unique_id=1348519623]
+scale = Vector2(0.09, 0.09)
+script = ExtResource("3_7dtk5")
+
+[node name="AreaUp" type="Area2D" parent="NextTurn2" unique_id=1577566354]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaUp" unique_id=597457443]
+position = Vector2(0, -145.00015)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_7dtk5")
+
+[node name="AreaDown" type="Area2D" parent="NextTurn2" unique_id=796183490]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaDown" unique_id=326199212]
+position = Vector2(0, 143.75012)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_ew4a3")
+
+[node name="AreaRight" type="Area2D" parent="NextTurn2" unique_id=463386295]
+position = Vector2(151, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaRight" unique_id=157043783]
+position = Vector2(-2.2500153, -2.0000005)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_17adx")
+
+[node name="AreaLeft" type="Area2D" parent="NextTurn2" unique_id=1369213750]
+position = Vector2(-26, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaLeft" unique_id=1744483655]
+position = Vector2(-118.44449, -1.0000108)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_4lheq")
+
+[connection signal="body_entered" from="NextTurn2/AreaUp" to="NextTurn2" method="_on_area_up_body_entered"]
+[connection signal="body_exited" from="NextTurn2/AreaUp" to="NextTurn2" method="_on_area_up_body_exited"]
+[connection signal="body_entered" from="NextTurn2/AreaDown" to="NextTurn2" method="_on_area_down_body_entered"]
+[connection signal="body_exited" from="NextTurn2/AreaDown" to="NextTurn2" method="_on_area_down_body_exited"]
+[connection signal="body_entered" from="NextTurn2/AreaRight" to="NextTurn2" method="_on_area_right_body_entered"]
+[connection signal="body_exited" from="NextTurn2/AreaRight" to="NextTurn2" method="_on_area_right_body_exited"]
+[connection signal="body_entered" from="NextTurn2/AreaLeft" to="NextTurn2" method="_on_area_left_body_entered"]
+[connection signal="body_exited" from="NextTurn2/AreaLeft" to="NextTurn2" method="_on_area_left_body_exited"]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://q2vfs30y0rrp"]
+
+[ext_resource type="Script" uid="uid://qr3wi51bhpmj" path="res://Scripts/End.cs" id="1_0wbsp"]
+
+[node name="End" type="Node2D" unique_id=1363220743]
+script = ExtResource("1_0wbsp")
+
+[node name="CongratsText" type="Label" parent="." unique_id=125748934]
+offset_left = 290.0
+offset_top = 320.0
+offset_right = 861.0
+offset_bottom = 405.0
+theme_override_font_sizes/font_size = 26
+text = "Game Over. You won. Congratulations."
