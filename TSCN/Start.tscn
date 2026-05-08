@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://2y40knn7pok1"]
+
+[ext_resource type="Script" uid="uid://cyq0ryi5xc4d" path="res://Scripts/Plot/Start.cs" id="1_2bjmo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2bjmo"]
+font_size = 30
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bjmo"]
+size = Vector2(4115.4243, 2493.8513)
+
+[node name="Start" type="Node2D" unique_id=1299603236]
+script = ExtResource("1_2bjmo")
+
+[node name="StartStaticBody" type="StaticBody2D" parent="." unique_id=1761916707]
+position = Vector2(0, 2)
+
+[node name="OptionButton" type="OptionButton" parent="StartStaticBody" unique_id=1911033814]
+offset_left = 571.0
+offset_top = 90.0
+offset_right = 673.0
+offset_bottom = 121.0
+selected = 2
+item_count = 3
+popup/item_0/text = "2 Players"
+popup/item_0/id = 0
+popup/item_1/text = "1 Player"
+popup/item_1/id = 1
+popup/item_2/id = 2
+
+[node name="Label" type="Label" parent="StartStaticBody" unique_id=2065056830]
+offset_left = 81.0
+offset_top = 82.0
+offset_right = 381.0
+offset_bottom = 130.0
+text = "How many players here?"
+label_settings = SubResource("LabelSettings_2bjmo")
+
+[node name="Label2" type="Label" parent="StartStaticBody" unique_id=428813818]
+offset_left = 83.0
+offset_top = 247.0
+offset_right = 469.0
+offset_bottom = 295.0
+text = "Name of second:"
+label_settings = SubResource("LabelSettings_2bjmo")
+
+[node name="Label3" type="Label" parent="StartStaticBody" unique_id=663339355]
+offset_left = 85.0
+offset_top = 162.0
+offset_right = 471.0
+offset_bottom = 210.0
+text = "Name of first:"
+label_settings = SubResource("LabelSettings_2bjmo")
+
+[node name="LineEdit" type="LineEdit" parent="StartStaticBody" unique_id=796303044]
+offset_left = 559.0
+offset_top = 168.0
+offset_right = 702.0
+offset_bottom = 199.0
+
+[node name="LineEdit2" type="LineEdit" parent="StartStaticBody" unique_id=2010069839]
+offset_left = 561.0
+offset_top = 250.0
+offset_right = 704.0
+offset_bottom = 281.0
+
+[node name="Button" type="Button" parent="StartStaticBody" unique_id=383066869]
+offset_left = 911.0
+offset_top = 513.0
+offset_right = 1002.0
+offset_bottom = 551.0
+text = "Start"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartStaticBody" unique_id=1330779247]
+position = Vector2(574.59705, 319.2097)
+scale = Vector2(0.2806044, 0.25806698)
+shape = SubResource("RectangleShape2D_2bjmo")
+
+[connection signal="item_selected" from="StartStaticBody/OptionButton" to="StartStaticBody" method="_on_option_button_item_selected"]
+[connection signal="text_changed" from="StartStaticBody/LineEdit" to="StartStaticBody" method="_on_line_edit_text_changed"]
+[connection signal="text_changed" from="StartStaticBody/LineEdit2" to="StartStaticBody" method="_on_line_edit_2_text_changed"]
+[connection signal="pressed" from="StartStaticBody/Button" to="StartStaticBody" method="_on_button_pressed"]

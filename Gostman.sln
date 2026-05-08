@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11626.88 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gostman", "Gostman.csproj", "{F7557346-841F-41A6-AF18-CAB3C6F0958C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodotGhostProject", "..\GodotGhostProject\GodotGhostProject.csproj", "{6C26D690-464D-4D35-8BC2-9F0B2397D751}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7557346-841F-41A6-AF18-CAB3C6F0958C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7557346-841F-41A6-AF18-CAB3C6F0958C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7557346-841F-41A6-AF18-CAB3C6F0958C}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{F7557346-841F-41A6-AF18-CAB3C6F0958C}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{F7557346-841F-41A6-AF18-CAB3C6F0958C}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{F7557346-841F-41A6-AF18-CAB3C6F0958C}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{6C26D690-464D-4D35-8BC2-9F0B2397D751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C26D690-464D-4D35-8BC2-9F0B2397D751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C26D690-464D-4D35-8BC2-9F0B2397D751}.ExportDebug|Any CPU.ActiveCfg = Release|Any CPU
+		{6C26D690-464D-4D35-8BC2-9F0B2397D751}.ExportDebug|Any CPU.Build.0 = Release|Any CPU
+		{6C26D690-464D-4D35-8BC2-9F0B2397D751}.ExportRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{6C26D690-464D-4D35-8BC2-9F0B2397D751}.ExportRelease|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

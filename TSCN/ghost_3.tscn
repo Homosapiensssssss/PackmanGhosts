@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://5on5xdlafrck"]
+
+[ext_resource type="Script" uid="uid://cyij25sk4s65u" path="res://Scripts/Ghosts/Ghost3.cs" id="1_d1635"]
+[ext_resource type="Texture2D" uid="uid://bl45qax3qtbyn" path="res://Sprites/images.png" id="2_eiya7"]
+[ext_resource type="Script" uid="uid://cbtc7s00d5w1p" path="res://Scripts/Ghosts/NextTurn33.cs" id="3_qilaq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xcmwd"]
+size = Vector2(244.44441, 80.99983)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27bty"]
+size = Vector2(244.44441, 68.38876)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qf4gm"]
+size = Vector2(81.80555, 244.44441)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0yp3"]
+size = Vector2(93.79161, 244.44441)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqmx1"]
+size = Vector2(53.207596, 56.248875)
+
+[node name="Ghost3" type="CharacterBody2D" unique_id=1627482624]
+script = ExtResource("1_d1635")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=393338881]
+scale = Vector2(0.09622692, 0.09544876)
+texture = ExtResource("2_eiya7")
+
+[node name="NextTurn2" type="Node2D" parent="." unique_id=1927488875]
+scale = Vector2(0.09, 0.09)
+script = ExtResource("3_qilaq")
+
+[node name="AreaUp" type="Area2D" parent="NextTurn2" unique_id=30449659]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaUp" unique_id=286127851]
+position = Vector2(0, -166.66666)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_xcmwd")
+
+[node name="AreaDown" type="Area2D" parent="NextTurn2" unique_id=1674841646]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaDown" unique_id=1310819374]
+position = Vector2(0, 166.66666)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_27bty")
+
+[node name="AreaRight" type="Area2D" parent="NextTurn2" unique_id=2132602895]
+position = Vector2(151, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaRight" unique_id=2088718114]
+position = Vector2(15.666641, -2.0000005)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_qf4gm")
+
+[node name="AreaLeft" type="Area2D" parent="NextTurn2" unique_id=1982919467]
+position = Vector2(-22.222221, 11.111112)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaLeft" unique_id=598532746]
+position = Vector2(-144.44444, -11.11111)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_n0yp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=251201907]
+position = Vector2(-3.3471565e-07, 0)
+scale = Vector2(0.4134748, 0.3911189)
+shape = SubResource("RectangleShape2D_pqmx1")
+
+[connection signal="body_entered" from="NextTurn2/AreaUp" to="NextTurn2" method="_on_area_up_body_entered"]
+[connection signal="body_exited" from="NextTurn2/AreaUp" to="NextTurn2" method="_on_area_up_body_exited"]
+[connection signal="body_entered" from="NextTurn2/AreaDown" to="NextTurn2" method="_on_area_down_body_entered"]
+[connection signal="body_exited" from="NextTurn2/AreaDown" to="NextTurn2" method="_on_area_down_body_exited"]
+[connection signal="body_entered" from="NextTurn2/AreaRight" to="NextTurn2" method="_on_area_right_body_entered"]
+[connection signal="body_exited" from="NextTurn2/AreaRight" to="NextTurn2" method="_on_area_right_body_exited"]
+[connection signal="body_entered" from="NextTurn2/AreaLeft" to="NextTurn2" method="_on_area_left_body_entered"]
+[connection signal="body_exited" from="NextTurn2/AreaLeft" to="NextTurn2" method="_on_area_left_body_exited"]
