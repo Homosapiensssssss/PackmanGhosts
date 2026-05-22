@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c8f44x8r1rqxb"]
 
 [ext_resource type="Script" uid="uid://mjjq303aa24i" path="res://Scripts/Ghosts/Ghost2.cs" id="1_na08h"]
-[ext_resource type="Texture2D" uid="uid://c5bl0mj8hi3vi" path="res://Sprites/Без названия.png" id="2_7dtk5"]
+[ext_resource type="Texture2D" uid="uid://dmdlutuugcd5v" path="res://Sprites/png-clipart-pac-man-adventures-in-time-pac-mania-pac-man-games-ghosts-pink-ghost-s-purple-violet-thumbnail.png" id="2_7dtk5"]
 [ext_resource type="Script" uid="uid://dre1ji0iwiomg" path="res://Scripts/Ghosts/NextTurn22.cs" id="3_7dtk5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_na08h"]
@@ -23,8 +23,8 @@ size = Vector2(127.124916, 244.44443)
 script = ExtResource("1_na08h")
 
 [node name="Ghost2Sprite" type="Sprite2D" parent="." unique_id=752596245]
-position = Vector2(-9.536743e-07, -1.013279e-06)
-scale = Vector2(0.14193547, 0.14864863)
+position = Vector2(0.15161419, 0)
+scale = Vector2(0.062347043, 0.06283007)
 texture = ExtResource("2_7dtk5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=71642120]
@@ -60,7 +60,7 @@ shape = SubResource("RectangleShape2D_17adx")
 position = Vector2(-26, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaLeft" unique_id=1744483655]
-position = Vector2(-154.88197, -1.0000113)
+position = Vector2(-151.77779, -0.9999999)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_4lheq")
 

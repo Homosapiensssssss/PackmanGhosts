@@ -18,7 +18,7 @@ public partial class BasicMap : Node2D
     	Vector2 newVelocity = new Vector2(1, 0) * Speed; 
     	CharBody.Velocity = newVelocity;
     	Transform2D rightTrans = body.Transform;
-    	rightTrans.Origin = new Vector2(847,305); 
+    	rightTrans.Origin = new Vector2(834,355); 
     	body.Transform = rightTrans;}
 	}
 	public void _on_tube_right_body_entered(Node2D body)
@@ -27,7 +27,7 @@ public partial class BasicMap : Node2D
     	Vector2 newVelocity = new Vector2(-1, 0) * Speed; 
     	CharBody.Velocity = newVelocity;
     	Transform2D leftTrans = body.Transform;
-    	leftTrans.Origin = new Vector2(330,305); 
+    	leftTrans.Origin = new Vector2(312,355); 
     	body.Transform = leftTrans;
 		}
 	}

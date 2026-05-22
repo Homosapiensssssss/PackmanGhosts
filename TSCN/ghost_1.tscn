@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://br8c1gxaynjac"]
+
+[ext_resource type="Texture2D" uid="uid://rjlwpf806nlt" path="res://Sprites/icon.svg" id="1_f4v78"]
+[ext_resource type="Script" uid="uid://doy2y7bb5oteq" path="res://Scripts/Ghost1.cs" id="1_wld5v"]
+[ext_resource type="Script" uid="uid://bvo34ulw6m3xq" path="res://Scripts/NextTurnGhost1.cs" id="3_bsc3e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kc1nt"]
+size = Vector2(21.961525, 22.562134)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6du2v"]
+size = Vector2(244.44441, 125.44424)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2f84"]
+size = Vector2(244.44441, 123.08325)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_piwqu"]
+size = Vector2(126.249985, 244.44441)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b67aj"]
+size = Vector2(127.124916, 244.44443)
+
+[node name="Ghost1" type="CharacterBody2D" unique_id=1251226913]
+script = ExtResource("1_wld5v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2050909527]
+position = Vector2(-1.9073486e-06, 0.5371933)
+scale = Vector2(0.17157437, 0.17626666)
+texture = ExtResource("1_f4v78")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1168760803]
+position = Vector2(1.1920929e-06, 0.5371933)
+scale = Vector2(0.9999998, 1)
+shape = SubResource("RectangleShape2D_kc1nt")
+
+[node name="NextTurnGhost1" type="Node2D" parent="." unique_id=2131277657]
+scale = Vector2(0.09, 0.09)
+script = ExtResource("3_bsc3e")
+
+[node name="AreaUp" type="Area2D" parent="NextTurnGhost1" unique_id=1965306404]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurnGhost1/AreaUp" unique_id=70817376]
+position = Vector2(0, -181.72235)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_6du2v")
+
+[node name="AreaDown" type="Area2D" parent="NextTurnGhost1" unique_id=783761667]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurnGhost1/AreaDown" unique_id=587721369]
+position = Vector2(0, 182.90285)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_d2f84")
+
+[node name="AreaRight" type="Area2D" parent="NextTurnGhost1" unique_id=1053688934]
+position = Vector2(151, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurnGhost1/AreaRight" unique_id=1565379602]
+position = Vector2(30.319427, -2.0000014)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_piwqu")
+
+[node name="AreaLeft" type="Area2D" parent="NextTurnGhost1" unique_id=1905247275]
+position = Vector2(-26, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurnGhost1/AreaLeft" unique_id=646014516]
+position = Vector2(-151.77779, -0.9999999)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_b67aj")
+
+[connection signal="body_entered" from="NextTurnGhost1/AreaUp" to="NextTurnGhost1" method="_on_area_up_body_entered"]
+[connection signal="body_exited" from="NextTurnGhost1/AreaUp" to="NextTurnGhost1" method="_on_area_up_body_exited"]
+[connection signal="body_entered" from="NextTurnGhost1/AreaDown" to="NextTurnGhost1" method="_on_area_down_body_entered"]
+[connection signal="body_exited" from="NextTurnGhost1/AreaDown" to="NextTurnGhost1" method="_on_area_down_body_exited"]
+[connection signal="body_entered" from="NextTurnGhost1/AreaRight" to="NextTurnGhost1" method="_on_area_right_body_entered"]
+[connection signal="body_exited" from="NextTurnGhost1/AreaRight" to="NextTurnGhost1" method="_on_area_right_body_exited"]
+[connection signal="body_entered" from="NextTurnGhost1/AreaLeft" to="NextTurnGhost1" method="_on_area_left_body_entered"]
+[connection signal="body_exited" from="NextTurnGhost1/AreaLeft" to="NextTurnGhost1" method="_on_area_left_body_exited"]

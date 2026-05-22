@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dwqki6g6u43qv"]
+
+[ext_resource type="Script" uid="uid://ct1u7nh1vhm8i" path="res://Scripts/Pacman.cs" id="1_1cyia"]
+[ext_resource type="Texture2D" uid="uid://c5bl0mj8hi3vi" path="res://Sprites/Без названия.png" id="1_437g2"]
+[ext_resource type="Script" uid="uid://cpnupj5ej1blt" path="res://Scripts/NextTurnPacman.cs" id="3_qawss"]
+[ext_resource type="Script" uid="uid://ddlxvl1raumi2" path="res://Scripts/AreaPacman.cs" id="4_qawss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4j5q"]
+size = Vector2(20.963276, 21.487747)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j44oq"]
+size = Vector2(244.44441, 125.44424)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_553t5"]
+size = Vector2(244.44441, 123.08325)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sm1a4"]
+size = Vector2(126.249985, 244.44441)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2jm4"]
+size = Vector2(127.124916, 244.44443)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qawss"]
+size = Vector2(24, 24)
+
+[node name="Pacman" type="CharacterBody2D" unique_id=476344960]
+script = ExtResource("1_1cyia")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=876344194]
+position = Vector2(-7.6293945e-06, 0)
+scale = Vector2(0.1330504, 0.14314844)
+texture = ExtResource("1_437g2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=484817591]
+position = Vector2(-3.8146973e-06, 0)
+scale = Vector2(0.9999996, 1)
+shape = SubResource("RectangleShape2D_g4j5q")
+
+[node name="NextTurnPacman" type="Node2D" parent="." unique_id=412434839]
+scale = Vector2(0.09, 0.09)
+script = ExtResource("3_qawss")
+
+[node name="AreaUp" type="Area2D" parent="NextTurnPacman" unique_id=1105863435]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurnPacman/AreaUp" unique_id=1835947389]
+position = Vector2(0, -181.72235)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_j44oq")
+
+[node name="AreaDown" type="Area2D" parent="NextTurnPacman" unique_id=1933740717]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurnPacman/AreaDown" unique_id=231725192]
+position = Vector2(0, 182.90285)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_553t5")
+
+[node name="AreaRight" type="Area2D" parent="NextTurnPacman" unique_id=121329543]
+position = Vector2(151, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurnPacman/AreaRight" unique_id=597892885]
+position = Vector2(30.319427, -2.0000014)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_sm1a4")
+
+[node name="AreaLeft" type="Area2D" parent="NextTurnPacman" unique_id=1778958661]
+position = Vector2(-26, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurnPacman/AreaLeft" unique_id=668834014]
+position = Vector2(-151.77779, -0.9999999)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_j2jm4")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1998695549]
+script = ExtResource("4_qawss")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=943843687]
+shape = SubResource("RectangleShape2D_qawss")
+
+[connection signal="body_entered" from="NextTurnPacman/AreaUp" to="NextTurnPacman" method="_on_area_up_body_entered"]
+[connection signal="body_exited" from="NextTurnPacman/AreaUp" to="NextTurnPacman" method="_on_area_up_body_exited"]
+[connection signal="body_entered" from="NextTurnPacman/AreaDown" to="NextTurnPacman" method="_on_area_down_body_entered"]
+[connection signal="body_exited" from="NextTurnPacman/AreaDown" to="NextTurnPacman" method="_on_area_down_body_exited"]
+[connection signal="body_entered" from="NextTurnPacman/AreaRight" to="NextTurnPacman" method="_on_area_right_body_entered"]
+[connection signal="body_exited" from="NextTurnPacman/AreaRight" to="NextTurnPacman" method="_on_area_right_body_exited"]
+[connection signal="body_entered" from="NextTurnPacman/AreaLeft" to="NextTurnPacman" method="_on_area_left_body_entered"]
+[connection signal="body_exited" from="NextTurnPacman/AreaLeft" to="NextTurnPacman" method="_on_area_left_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
