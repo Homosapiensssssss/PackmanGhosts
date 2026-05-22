@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bvujojcxbj8lr" path="res://Sprites/pacman-arduino-270x297.webp" id="1_25ihq"]
 [ext_resource type="Script" uid="uid://bxgpedr6ahirw" path="res://Scripts/Plot/BasicMap.cs" id="1_egcyi"]
+[ext_resource type="Script" uid="uid://d0jbslryn6n5n" path="res://Scripts/MapBase.cs" id="2_7nc27"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25ihq"]
 size = Vector2(212.5, 27.5)
@@ -47,6 +48,7 @@ script = ExtResource("1_egcyi")
 
 [node name="MapBase" type="StaticBody2D" parent="." unique_id=584834491]
 position = Vector2(0, -1)
+script = ExtResource("2_7nc27")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapBase" unique_id=96238478]
 position = Vector2(260, 12)

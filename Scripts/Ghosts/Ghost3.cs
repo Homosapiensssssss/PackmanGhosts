@@ -12,7 +12,10 @@ public partial class Ghost3 : CharacterBody2D
 	public bool IsRight = false;
 	public bool IsLeft = false;
 
-	
+	public override void _Ready()
+	{
+		AddToGroup("threats");
+	}
 	Vector2 Bufer = Vector2.Zero ;
 	public override void _PhysicsProcess(double delta)
 	{

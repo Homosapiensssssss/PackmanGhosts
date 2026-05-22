@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bcc58eyapiiy5"]
+
+[ext_resource type="Texture2D" uid="uid://crxsyefuxky4q" path="res://icon.svg" id="1_gcoxa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqm0d"]
+size = Vector2(30, 30)
+
+[node name="Agent" type="CharacterBody2D" unique_id=228393407]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=783114181]
+shape = SubResource("RectangleShape2D_xqm0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=71941301]
+position = Vector2(2.3841858e-07, 0)
+scale = Vector2(0.22401595, 0.22794509)
+texture = ExtResource("1_gcoxa")

@@ -1,30 +1,30 @@
 [gd_scene format=3 uid="uid://c8f44x8r1rqxb"]
 
 [ext_resource type="Script" uid="uid://mjjq303aa24i" path="res://Scripts/Ghosts/Ghost2.cs" id="1_na08h"]
-[ext_resource type="Texture2D" uid="uid://dmdlutuugcd5v" path="res://Sprites/png-clipart-pac-man-adventures-in-time-pac-mania-pac-man-games-ghosts-pink-ghost-s-purple-violet-thumbnail.png" id="2_7dtk5"]
+[ext_resource type="Texture2D" uid="uid://c5bl0mj8hi3vi" path="res://Sprites/Без названия.png" id="2_7dtk5"]
 [ext_resource type="Script" uid="uid://dre1ji0iwiomg" path="res://Scripts/Ghosts/NextTurn22.cs" id="3_7dtk5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_na08h"]
 size = Vector2(22, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dtk5"]
-size = Vector2(244.44441, 80.99983)
+size = Vector2(244.44441, 125.44424)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ew4a3"]
-size = Vector2(244.44441, 68.38876)
+size = Vector2(244.44441, 123.08325)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17adx"]
-size = Vector2(81.80555, 244.44441)
+size = Vector2(126.249985, 244.44441)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lheq"]
-size = Vector2(93.79161, 244.44443)
+size = Vector2(127.124916, 244.44443)
 
 [node name="Ghost2" type="CharacterBody2D" unique_id=1971237107]
 script = ExtResource("1_na08h")
 
 [node name="Ghost2Sprite" type="Sprite2D" parent="." unique_id=752596245]
-position = Vector2(2.9802322e-08, 5.9604645e-08)
-scale = Vector2(0.06, 0.06)
+position = Vector2(-9.536743e-07, -1.013279e-06)
+scale = Vector2(0.14193547, 0.14864863)
 texture = ExtResource("2_7dtk5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=71642120]
@@ -37,14 +37,14 @@ script = ExtResource("3_7dtk5")
 [node name="AreaUp" type="Area2D" parent="NextTurn2" unique_id=1577566354]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaUp" unique_id=597457443]
-position = Vector2(0, -159.5001)
+position = Vector2(0, -181.72235)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_7dtk5")
 
 [node name="AreaDown" type="Area2D" parent="NextTurn2" unique_id=796183490]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaDown" unique_id=326199212]
-position = Vector2(0, 154.69453)
+position = Vector2(0, 182.90285)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_ew4a3")
 
@@ -52,7 +52,7 @@ shape = SubResource("RectangleShape2D_ew4a3")
 position = Vector2(151, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaRight" unique_id=157043783]
-position = Vector2(8.097214, -2.000001)
+position = Vector2(30.319427, -2.0000014)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_17adx")
 
@@ -60,7 +60,7 @@ shape = SubResource("RectangleShape2D_17adx")
 position = Vector2(-26, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaLeft" unique_id=1744483655]
-position = Vector2(-138.21532, -1.0000111)
+position = Vector2(-154.88197, -1.0000113)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_4lheq")
 

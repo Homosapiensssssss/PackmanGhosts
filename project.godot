@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="gostman2"
-run/main_scene="uid://2voohmcvpt1a"
+run/main_scene="uid://c2x6ihe64orlc"
 config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+driver/driver="Dummy"
 
 [dotnet]
 

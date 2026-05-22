@@ -5,21 +5,22 @@
 [ext_resource type="Script" uid="uid://cbtc7s00d5w1p" path="res://Scripts/Ghosts/NextTurn33.cs" id="3_qilaq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xcmwd"]
-size = Vector2(244.44441, 80.99983)
+size = Vector2(244.44441, 107.16657)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bty"]
-size = Vector2(244.44441, 68.38876)
+size = Vector2(244.44441, 99.999954)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qf4gm"]
-size = Vector2(81.80555, 244.44441)
+size = Vector2(107.56944, 244.44441)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0yp3"]
-size = Vector2(93.79161, 244.44441)
+size = Vector2(113.56246, 244.44441)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pqmx1"]
 size = Vector2(53.207596, 56.248875)
 
 [node name="Ghost3" type="CharacterBody2D" unique_id=1627482624]
+position = Vector2(0, -2)
 script = ExtResource("1_d1635")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=393338881]
@@ -33,14 +34,14 @@ script = ExtResource("3_qilaq")
 [node name="AreaUp" type="Area2D" parent="NextTurn2" unique_id=30449659]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaUp" unique_id=286127851]
-position = Vector2(0, -166.66666)
+position = Vector2(0, -166.66667)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_xcmwd")
 
 [node name="AreaDown" type="Area2D" parent="NextTurn2" unique_id=1674841646]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaDown" unique_id=1310819374]
-position = Vector2(0, 166.66666)
+position = Vector2(0, 172.22227)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_27bty")
 
@@ -48,7 +49,7 @@ shape = SubResource("RectangleShape2D_27bty")
 position = Vector2(151, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaRight" unique_id=2088718114]
-position = Vector2(15.666641, -2.0000005)
+position = Vector2(28.5486, -2)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_qf4gm")
 
@@ -56,7 +57,7 @@ shape = SubResource("RectangleShape2D_qf4gm")
 position = Vector2(-22.222221, 11.111112)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextTurn2/AreaLeft" unique_id=598532746]
-position = Vector2(-144.44444, -11.11111)
+position = Vector2(-154.32988, -11.111111)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_n0yp3")
 
