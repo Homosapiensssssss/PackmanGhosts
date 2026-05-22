@@ -19,13 +19,16 @@ public partial class MapGenerator : Node2D
 
 	public override void _Ready()
 	{
-		Vector2 screenSize = GetViewport().GetVisibleRect().Size;
+		int designWidth  = (int)ProjectSettings.GetSetting("display/window/size/viewport_width");
+		int designHeight = (int)ProjectSettings.GetSetting("display/window/size/viewport_height");
 
-		GridWidth  = (int)(screenSize.X / CellSize);
-		GridHeight = (int)(screenSize.Y / CellSize);
+		GridWidth  = designWidth / CellSize;
+		GridHeight = designHeight / CellSize;
 
 		if (GridWidth  % 2 == 0) GridWidth--;
 		if (GridHeight % 2 == 0) GridHeight--;
+
+		GD.Print($"Design: {designWidth}x{designHeight}, Grid: {GridWidth}x{GridHeight}, CellSize: {CellSize}");
 
 		if (WallScene == null)
 		{
@@ -52,7 +55,6 @@ public partial class MapGenerator : Node2D
 		SpawnWalls();
 	}
 
-
 	private void CarveMaze(int x, int y)
 	{
 		var dirs = ShuffledDirections();
@@ -68,7 +70,6 @@ public partial class MapGenerator : Node2D
 			}
 		}
 	}
-
 
 	private void RemoveExtraWalls()
 	{
@@ -100,7 +101,6 @@ public partial class MapGenerator : Node2D
 		if (y < GridHeight - 1 && Grid[x, y + 1] == 0) count++;
 		return count;
 	}
-
 
 	private void SetSpawnPoints()
 	{
@@ -183,7 +183,6 @@ public partial class MapGenerator : Node2D
 					Grid[x, y] = 0;
 	}
 
-
 	private void SpawnWalls()
 	{
 		for (int x = 0; x < GridWidth; x++)
@@ -196,9 +195,8 @@ public partial class MapGenerator : Node2D
 			}
 	}
 
-
 	public Vector2 GridToWorld(int x, int y)
-		=> new Vector2(x * CellSize + CellSize / 2f, y * CellSize + CellSize / 2f);
+		=> new Vector2(x * CellSize + CellSize * 0.5f, y * CellSize + CellSize * 0.5f);
 
 	public Vector2I WorldToGrid(Vector2 worldPos)
 	{

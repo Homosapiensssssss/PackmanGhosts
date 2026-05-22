@@ -9,31 +9,23 @@
 [ext_resource type="PackedScene" uid="uid://bp1pgtmdjt62n" path="res://TSCN/ivent_apple.tscn" id="6_jgoxc"]
 
 [node name="World" type="Node2D" unique_id=1265964222]
-position = Vector2(-3, -16)
-scale = Vector2(1.001752, 0.9307631)
 metadata/_edit_horizontal_guides_ = [202.0]
 
 [node name="MapGenerator" type="Node2D" parent="." unique_id=1089501443]
-position = Vector2(5.9895043, 17.190195)
-scale = Vector2(0.9663106, 1.0763283)
 script = ExtResource("1_5oaok")
 WallScene = ExtResource("2_mgmuu")
 
 [node name="Ghost2" parent="." unique_id=1971237107 instance=ExtResource("2_q2ge6")]
 position = Vector2(403.2934, 305.12598)
-scale = Vector2(1.2495412, 1.2274873)
 
 [node name="Ghost3" parent="." unique_id=1627482624 instance=ExtResource("4_ewlul")]
 position = Vector2(730.7198, 77.35588)
-scale = Vector2(1.2864083, 1.2502601)
 
 [node name="Pacman" parent="." unique_id=476344960 instance=ExtResource("4_32n48")]
 position = Vector2(442.2252, 70.90955)
-scale = Vector2(1.0844388, 1.0375535)
 
 [node name="Ghost1" parent="." unique_id=1251226913 instance=ExtResource("5_jgoxc")]
 position = Vector2(947.34033, 178.3483)
-scale = Vector2(1.369538, 1.2661777)
 
 [node name="IventApple" parent="." unique_id=334935132 instance=ExtResource("6_jgoxc")]
 position = Vector2(960.3175, 270.74557)
