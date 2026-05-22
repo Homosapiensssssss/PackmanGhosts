@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://2voohmcvpt1a"]
 
+[ext_resource type="Script" uid="uid://cgujssvge3kip" path="res://Scripts/MapGenerator.cs" id="1_5oaok"]
+[ext_resource type="PackedScene" uid="uid://bwnamn2vcpdnl" path="res://TSCN/WallBlock.tscn" id="2_mgmuu"]
 [ext_resource type="PackedScene" uid="uid://c8f44x8r1rqxb" path="res://TSCN/ghost_2.tscn" id="2_q2ge6"]
-[ext_resource type="PackedScene" uid="uid://cx16terc5wrjt" path="res://TSCN/basic_map_sprite.tscn" id="3_q2ge6"]
 [ext_resource type="PackedScene" uid="uid://dwqki6g6u43qv" path="res://TSCN/pacman.tscn" id="4_32n48"]
 [ext_resource type="PackedScene" uid="uid://5on5xdlafrck" path="res://TSCN/ghost_3.tscn" id="4_ewlul"]
 [ext_resource type="PackedScene" uid="uid://br8c1gxaynjac" path="res://TSCN/ghost_1.tscn" id="5_jgoxc"]
@@ -12,9 +13,11 @@ position = Vector2(-3, -16)
 scale = Vector2(1.001752, 0.9307631)
 metadata/_edit_horizontal_guides_ = [202.0]
 
-[node name="NodeOfMapBase" parent="." unique_id=547693863 instance=ExtResource("3_q2ge6")]
-position = Vector2(5.989505, 17.190195)
-scale = Vector2(0.9663107, 1.0763284)
+[node name="MapGenerator" type="Node2D" parent="." unique_id=1089501443]
+position = Vector2(5.9895043, 17.190195)
+scale = Vector2(0.9663106, 1.0763283)
+script = ExtResource("1_5oaok")
+WallScene = ExtResource("2_mgmuu")
 
 [node name="Ghost2" parent="." unique_id=1971237107 instance=ExtResource("2_q2ge6")]
 position = Vector2(403.2934, 305.12598)
@@ -29,9 +32,9 @@ position = Vector2(442.2252, 70.90955)
 scale = Vector2(1.0844388, 1.0375535)
 
 [node name="Ghost1" parent="." unique_id=1251226913 instance=ExtResource("5_jgoxc")]
-position = Vector2(400.29865, 157.93492)
+position = Vector2(947.34033, 178.3483)
 scale = Vector2(1.369538, 1.2661777)
 
 [node name="IventApple" parent="." unique_id=334935132 instance=ExtResource("6_jgoxc")]
-position = Vector2(292.48755, 114.959435)
+position = Vector2(960.3175, 270.74557)
 scale = Vector2(12, -1.812)
