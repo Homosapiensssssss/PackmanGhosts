@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dwqki6g6u43qv"]
+
+[ext_resource type="Script" uid="uid://ct1u7nh1vhm8i" path="res://Scripts/Pacman/Pacman.cs" id="1_1cyia"]
+[ext_resource type="Texture2D" uid="uid://lj8uinhu57ap" path="res://Sprites/euXe14aL-O-_8MVlFXkbhB02KZfAKGHl-o3hH5BwsszK8LGe6BQemkURDNNls9wXuU68vxLxszSAwqK0e8bs71ZJ.jpg" id="2_hf5wl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4j5q"]
+size = Vector2(21.481647, 21.743874)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qawss"]
+size = Vector2(24, 24)
+
+[node name="Pacman" type="CharacterBody2D" unique_id=476344960]
+script = ExtResource("1_1cyia")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=876344194]
+position = Vector2(0.5000007, -7.1525574e-07)
+scale = Vector2(0.25609756, 0.2682927)
+texture = ExtResource("2_hf5wl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=484817591]
+position = Vector2(0.25918186, -0.1280632)
+scale = Vector2(0.9999996, 1)
+shape = SubResource("RectangleShape2D_g4j5q")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1998695549]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=943843687]
+shape = SubResource("RectangleShape2D_qawss")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
