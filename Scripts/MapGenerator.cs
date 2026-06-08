@@ -7,6 +7,7 @@ public partial class MapGenerator : Node2D
 	[Export] public int CellSize = 32;
 	[Export] public PackedScene WallScene;
 	[Export] public float WallRemovalRate = 0.35f;
+	[Export] public PackedScene BorderWallScene;
 
 	public int GridWidth;
 	public int GridHeight;
@@ -186,13 +187,26 @@ public partial class MapGenerator : Node2D
 	private void SpawnWalls()
 	{
 		for (int x = 0; x < GridWidth; x++)
+		{
 			for (int y = 0; y < GridHeight; y++)
 			{
 				if (Grid[x, y] != 1) continue;
-				var wall = WallScene.Instantiate<Node2D>();
+
+				bool isBorder =
+					x == 0 ||
+					y == 0 ||
+					x == GridWidth - 1 ||
+					y == GridHeight - 1;
+
+				PackedScene sceneToSpawn = isBorder && BorderWallScene != null
+					? BorderWallScene
+					: WallScene;
+
+				var wall = sceneToSpawn.Instantiate<Node2D>();
 				wall.GlobalPosition = GridToWorld(x, y);
 				AddChild(wall);
 			}
+		}
 	}
 
 	public Vector2 GridToWorld(int x, int y)

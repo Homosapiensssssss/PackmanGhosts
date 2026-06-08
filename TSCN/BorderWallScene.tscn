@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://bwnamn2vcpdnl"]
+[gd_scene format=3 uid="uid://lqf03y3wr3nx"]
 
-[ext_resource type="Texture2D" uid="uid://b8nog80didsxc" path="res://Sprites/свечение.png" id="1_cfpen"]
-[ext_resource type="Texture2D" uid="uid://ca41enkbt76lq" path="res://Sprites/wall.png" id="1_p4rjl"]
+[ext_resource type="Texture2D" uid="uid://bd3aivvsi2g0g" path="res://Sprites/свечение2.png" id="1_y7056"]
+[ext_resource type="Texture2D" uid="uid://coqjh7un7ykt6" path="res://Sprites/wall2png.png" id="2_dt44f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_01ifh"]
 size = Vector2(32, 32)
@@ -14,8 +14,8 @@ debug_color = Color(0.292291, 0.501165, 0.5684397, 1)
 
 [node name="Свечение" type="Sprite2D" parent="." unique_id=1105350045]
 scale = Vector2(0.47560975, 0.47560975)
-texture = ExtResource("1_cfpen")
+texture = ExtResource("1_y7056")
 
 [node name="Wall" type="Sprite2D" parent="." unique_id=1665116117]
 scale = Vector2(0.36280486, 0.36280486)
-texture = ExtResource("1_p4rjl")
+texture = ExtResource("2_dt44f")

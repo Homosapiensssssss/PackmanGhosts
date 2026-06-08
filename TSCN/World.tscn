@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://2voohmcvpt1a"]
 
 [ext_resource type="Script" uid="uid://cgujssvge3kip" path="res://Scripts/MapGenerator.cs" id="1_5oaok"]
+[ext_resource type="Texture2D" uid="uid://dt5m1yytjp1m" path="res://Sprites/фон.png" id="1_8j0cj"]
+[ext_resource type="Script" uid="uid://cmab5lxum5si5" path="res://Scripts/ParalaxMove.cs" id="1_54i4r"]
+[ext_resource type="PackedScene" uid="uid://lqf03y3wr3nx" path="res://TSCN/BorderWallScene.tscn" id="2_5oaok"]
 [ext_resource type="PackedScene" uid="uid://bwnamn2vcpdnl" path="res://TSCN/WallBlock.tscn" id="2_mgmuu"]
 [ext_resource type="PackedScene" uid="uid://c8f44x8r1rqxb" path="res://TSCN/ghost_2.tscn" id="2_q2ge6"]
 [ext_resource type="PackedScene" uid="uid://dwqki6g6u43qv" path="res://TSCN/pacman.tscn" id="4_32n48"]
@@ -11,9 +14,32 @@
 [node name="World" type="Node2D" unique_id=1265964222]
 metadata/_edit_horizontal_guides_ = [202.0]
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1977726434]
+offset_left = -250.0
+offset_top = -245.0
+offset_right = 1459.0
+offset_bottom = 882.0
+color = Color(0.07450981, 0.09803922, 0.2784314, 1)
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1306876062]
+texture_repeat = 2
+repeat_size = Vector2(42, 42)
+repeat_times = 55
+follow_viewport = false
+ignore_camera_scroll = true
+script = ExtResource("1_54i4r")
+
+[node name="Фон" type="Sprite2D" parent="Parallax2D" unique_id=1067249545]
+modulate = Color(1, 1, 1, 0.3529412)
+texture_filter = 1
+position = Vector2(21, 21)
+scale = Vector2(0.5121951, 0.5121951)
+texture = ExtResource("1_8j0cj")
+
 [node name="MapGenerator" type="Node2D" parent="." unique_id=1089501443]
 script = ExtResource("1_5oaok")
-WallScene = ExtResource("2_mgmuu")
+WallScene = ExtResource("2_5oaok")
+BorderWallScene = ExtResource("2_mgmuu")
 
 [node name="Ghost2" parent="." unique_id=1971237107 instance=ExtResource("2_q2ge6")]
 position = Vector2(403.2934, 305.12598)
